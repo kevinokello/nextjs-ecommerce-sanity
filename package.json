@@ -17,7 +17,9 @@
     "@mui/styles": "^5.10.10",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
+    "js-cookie": "^3.0.1",
     "next": "13.0.0",
+    "notistack": "^1.0.10",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
