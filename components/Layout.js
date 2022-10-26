@@ -13,9 +13,6 @@ import Head from "next/head";
 import NextLink from "next/link";
 
 export default function Layout({ title, description, children }) {
-  const router = useRouter();
-  const { state, dispatch } = useContext(Store);
-  const { darkMode, cart, userInfo } = state;
   const theme = createTheme({
     components: {
       MuiLink: {
@@ -37,7 +34,6 @@ export default function Layout({ title, description, children }) {
       },
     },
     palette: {
-      mode: darkMode ? "dark" : "light",
       primary: {
         main: "#f0c000",
       },
@@ -56,7 +52,7 @@ export default function Layout({ title, description, children }) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <AppBar position="static">
-          <Toolbar sx={classes.toolbar}>
+          <Toolbar>
             <NextLink href="/" passHref>
               <Link>
                 <Typography>amazona</Typography>
