@@ -1,3 +1,4 @@
+import React from "react";
 import { createTheme } from "@mui/material/styles";
 import {
   AppBar,
@@ -65,7 +66,7 @@ export default function Layout({ title, description, children }) {
           {children}
         </Container>
         <Box component="footer" sx={classes.footer}>
-          <Typography>All rights reserved. Sanity Amazona.</Typography>
+          <Typography>All rights reserved. KevCodes.</Typography>
         </Box>
       </ThemeProvider>
     </>
