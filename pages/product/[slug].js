@@ -99,8 +99,8 @@ export default function ProductScreen(props) {
                 src={urlFor(product.image)}
                 alt={product.name}
                 layout="responsive"
-                width={640}
-                height={640}
+                width={540}
+                height={540}
               />
             </Grid>
             <Grid item md={3} xs={12}>
