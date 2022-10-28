@@ -65,6 +65,7 @@ const classes = {
     '& span': {
       color: '#000000',
     },
+    
   },
 };
 
