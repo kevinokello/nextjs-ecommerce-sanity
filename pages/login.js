@@ -11,7 +11,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-// import { useSnackbar } from 'notistack';
+import { useSnackbar } from 'notistack';
 import axios from 'axios';
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
@@ -34,7 +34,7 @@ export default function LoginScreen() {
     formState: { errors },
   } = useForm();
 
-  // const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
   const submitHandler = async ({ email, password }) => {
     try {
       const { data } = await axios.post('/api/users/login', {
@@ -45,7 +45,7 @@ export default function LoginScreen() {
       jsCookie.set('userInfo', JSON.stringify(data));
       router.push(redirect || '/');
     } catch (err) {
-      // enqueueSnackbar(getError(err), { variant: 'error' });
+      enqueueSnackbar(getError(err), { variant: 'error' });
     }
   };
   return (

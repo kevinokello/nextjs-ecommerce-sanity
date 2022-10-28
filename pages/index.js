@@ -1,13 +1,13 @@
-import { Alert, CircularProgress, Grid } from "@mui/material";
-import axios from "axios";
-import { useRouter } from "next/router";
-// import { useSnackbar } from "notistack";
-import { useContext, useEffect, useState } from "react";
-import Layout from "../components/Layout";
-import ProductItem from "../components/ProductItem";
-import client from "../utils/client";
-import { urlForThumbnail } from "../utils/image";
-import { Store } from "../utils/Store";
+import { Alert, CircularProgress, Grid } from '@mui/material';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import { useSnackbar } from 'notistack';
+import { useContext, useEffect, useState } from 'react';
+import Layout from '../components/Layout';
+import ProductItem from '../components/ProductItem';
+import client from '../utils/client';
+import { urlForThumbnail } from '../utils/image';
+import { Store } from '../utils/Store';
 
 export default function Home() {
   const {
@@ -15,10 +15,10 @@ export default function Home() {
     dispatch,
   } = useContext(Store);
   const router = useRouter();
-  // const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
   const [state, setState] = useState({
     products: [],
-    error: "",
+    error: '',
     loading: true,
   });
   const { loading, error, products } = state;
@@ -40,11 +40,11 @@ export default function Home() {
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
     if (data.countInStock < quantity) {
-      // enqueueSnackbar("Sorry. Product is out of stock", { variant: "error" });
+      enqueueSnackbar('Sorry. Product is out of stock', { variant: 'error' });
       return;
     }
     dispatch({
-      type: "CART_ADD_ITEM",
+      type: 'CART_ADD_ITEM',
       payload: {
         _key: product._id,
         name: product.name,
@@ -55,10 +55,10 @@ export default function Home() {
         quantity,
       },
     });
-    // enqueueSnackbar(`${product.name} added to the cart`, {
-    //   variant: "success",
-    // });
-    router.push("/cart");
+    enqueueSnackbar(`${product.name} added to the cart`, {
+      variant: 'success',
+    });
+    router.push('/cart');
   };
 
   return (

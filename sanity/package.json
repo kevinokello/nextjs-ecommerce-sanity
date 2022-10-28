@@ -1,10 +1,10 @@
 {
-  "name": "next-ecommerce",
+  "name": "sanityamazona",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "kevin okello <kevinokello222@gmail.com>",
+  "author": "Basir Jafarzadeh <basirjafarzadeh@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -14,13 +14,13 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.35.0",
-    "@sanity/core": "^2.35.0",
-    "@sanity/default-layout": "^2.35.0",
-    "@sanity/default-login": "^2.35.0",
-    "@sanity/desk-tool": "^2.35.0",
+    "@sanity/base": "^2.27.0",
+    "@sanity/core": "^2.27.0",
+    "@sanity/default-layout": "^2.27.0",
+    "@sanity/default-login": "^2.27.0",
+    "@sanity/desk-tool": "^2.27.0",
     "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^2.35.0",
+    "@sanity/vision": "^2.27.0",
     "eslint": "^8.6.0",
     "prop-types": "^15.7",
     "react": "^17.0",
@@ -30,6 +30,6 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevinokello/nextjs-ecommerce-sanity.git"
+    "url": "https://github.com/basir/sanity-amazona.git"
   }
 }

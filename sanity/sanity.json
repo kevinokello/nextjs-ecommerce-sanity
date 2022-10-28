@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "next-ecommerce"
+    "name": "sanity-amazona"
   },
   "api": {
-    "projectId": "7eq85p0q",
+    "projectId": "ptju5yb0",
     "dataset": "production"
   },
   "plugins": [
